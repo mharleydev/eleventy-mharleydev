@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Harley</title>
+    <title>{{ pageTitle }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/styles.css">
-    <meta property="og:title" content="Michael Harley, Aspiring Web Developer" />
-    <meta property="og:description" content="Michael is a web developer in Nashville, TN" />
+    <meta property="og:title" content="{{ pageTitle }}" />
+    <meta property="og:description" content="{{ description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mharley.dev" />
     <meta property="og:image" content="https://mharley.dev/images/Michael-Harley-Avatar.jpeg" />
@@ -27,11 +27,15 @@
                     <a class= "nav-link" href="/posts/">Posts</a>
                 </nav>
             </section>
+            
         </div>
     </header>
-     <main>
+    <main>
         <div class="container">
-            {{ content }}
+            
+            <section class="bio">
+               {{ content | safe }}
+            </section>
         </div>
     </main>
     <footer>
