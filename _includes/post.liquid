@@ -3,6 +3,9 @@ layout: base.liquid
 ---
 <h1 class="post-title">{{ pageTitle }}</h1>
 <div class="post-date">{{ date | date: "%B %d, %Y" }}</div>
+<section class="post-header-image">
+    <img src="{{ postHeaderImageUrl }}" alt="Header image">
+</section>
 <section class="post-content">
 {{ content }}
 </section>

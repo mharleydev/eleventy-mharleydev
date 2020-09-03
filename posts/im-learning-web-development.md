@@ -2,6 +2,7 @@
 pageTitle: I’m learning web development
 description: I'm teaching myself web development and I'll be writing about my journey.
 date: 2020-09-02
+postHeaderImageUrl: /media/learning-web-dev.jpeg
 ---
 I recently learned that my job is being outsourced. The favorite part of my current job is when I get to write PowerShell to solve problems so with that in mind, I’m going see this opportunity to teach myself web development with the intent of becoming a web developer.
 
