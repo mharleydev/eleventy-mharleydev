@@ -1,6 +1,5 @@
 ---
 layout: homepage.liquid
-pageTitle: Michael Harley
 description: Aspiring Web Developer in Nashville
 changeFreq: monthly
 postHeaderImageUrl: /images/Michael-Harley-Avatar.jpeg
