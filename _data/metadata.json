@@ -1,0 +1,17 @@
+
+{
+    "title": "Michael Harley",
+    "url": "https://mharley.dev",
+    "description": "I'm a SharePoint Admin/Engineer/Dev transforming into a web developer.",
+    "feed": {
+      "subtitle": "I'm a SharePoint Admin/Engineer/Dev transforming into a web developer.",
+      "filename": "feed.xml",
+      "path": "/feeds/feed.xml",
+      "id": "https://mharley.dev"
+    },
+    "author": {
+      "name": "Michael Harley",
+      "email": "michael@mharley.dev",
+      "url": "https://mharley.dev"
+    }
+  }

@@ -9,7 +9,7 @@
     <meta property="og:title" content="{{ pageTitle }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mharley.dev" />
+    <meta property="og:url" content="{{ metadata.url }}" />
     <meta property="og:image" content="https://mharley.dev/images/Michael-Harley-Avatar.jpeg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -42,7 +42,8 @@
                 <a href="https://twitter.com/mharleydev"><img class="social-icons" src="/media/iconfinder_twitter_834708.svg" alt="twitter icon"></a>
                 <a href="https://github.com/mharleydev"><img class="social-icons" src="/media/iconfinder_github_834724.svg" alt="git hub icon"></a>
                 <a href="https://www.linkedin.com/in/mharleydev/"><img src="/media/iconfinder_linkedin_834713.svg" alt="linked in icon" class="social-icons"></a>
-                <a href="mailto:michael@mharley.dev"><img src="/media/iconfinder_Mail_1891029.svg" alt="mail icon" class="social-icons"></a>
+                <a href="mailto:{{ metadata.author.email }}"><img src="/media/iconfinder_Mail_1891029.svg" alt="mail icon" class="social-icons"></a>
+                <a href="{{ metadata.feed.path }}"><img src="/media/iconfinder_rss_1632493.svg" alt="rss feed icon" class="social-icons"></a>
             </section>
             <section class="disclaimer">
                 <p>Copyright © 2020 Michael Harley | This site does not use cookies</p>
