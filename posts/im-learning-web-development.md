@@ -1,5 +1,5 @@
 ---
-pageTitle: I’m learning web development
+title: I’m learning web development
 description: I'm teaching myself web development and I'll be writing about my journey.
 date: 2020-09-02
 postHeaderImageUrl: /media/learning-web-dev.jpeg

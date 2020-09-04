@@ -1,11 +1,11 @@
 ---
-layout: base.liquid
+layout: layouts/base.njk
 ---
 <article class="post">
-    <h1 class="post-title">{{ pageTitle }}</h1>
-    <div class="post-date">Published {{ date | date: "%B %d, %Y" }}</div>
+    <h1 class="post-title">{{ title }}</h1>
+    <div class="post-date">Published {{ date.toDateString() }}</div>
     <img class="post-header-image" src="{{ postHeaderImageUrl }}" alt="Header image">
     <section class="post-content">
-    {{ content }}
+    {{ content | safe }}
     </section>
 </article>

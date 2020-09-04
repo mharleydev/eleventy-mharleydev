@@ -1,15 +1,15 @@
 ---
-layout: standard-page.liquid
+layout: layouts/standard-page.njk
 pageTitle: Posts Index
 description: The most recent postings from Michael Harley
 changeFreq: daily
 postHeaderImageUrl: /images/Michael-Harley-Avatar.jpeg
 ---
 <section class="post-info">
-    {% for post in collections.posts reversed %}
+    {% for post in collections.posts | reverse %}
     <section class="post-summary">
         <h2 class="post-info-heading"><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
-        <div class="post-index-date">Published {{ post.date | date: "%B %d, %Y" }}</div>
+        <div class="post-index-date">Published {{ post.data.date.toDateString() }}</div>
         <p class="post-description">{{ post.data.description }}</p>
         <p class="post-read-more"><a href="{{ post.url }}"> Read More --></a></p>
     </section>

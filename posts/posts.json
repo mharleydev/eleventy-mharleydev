@@ -1,5 +1,5 @@
 {
-    "layout": "post.liquid",
+    "layout": "layouts/post.njk",
     "tags": ["posts"],
     "changeFreq": "monthly"
 }

@@ -6,7 +6,7 @@
     "feed": {
       "subtitle": "I'm a SharePoint Admin/Engineer/Dev transforming into a web developer.",
       "filename": "feed.xml",
-      "path": "/feeds/feed.xml",
+      "path": "/feed/feed.xml",
       "id": "https://mharley.dev"
     },
     "author": {
