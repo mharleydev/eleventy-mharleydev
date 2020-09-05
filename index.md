@@ -1,6 +1,6 @@
 ---
 layout: layouts/homepage.njk
-pageTitle: Home
+title: Home
 description: Aspiring Web Developer in Nashville
 changeFreq: monthly
 postHeaderImageUrl: /images/Michael-Harley-Avatar.jpeg
