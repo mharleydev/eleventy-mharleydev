@@ -1,11 +1,11 @@
 ---
 title: Topics
-permalink: /tags/
+permalink: /thoughts/topics/
 layout: layouts/standard-page.njk
 ---
 <section class="tags-container">
 {% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+  {% set tagUrl %}/thoughts/{{ tag }}/{% endset %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {% endfor %}
 </section>

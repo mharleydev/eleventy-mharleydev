@@ -12,25 +12,6 @@ postHeaderImageUrl: /images/Michael-Harley-Avatar.jpeg
         <div class="post-index-date">Published {{ post.data.date.toDateString() }}</div>
         <p class="post-description">{{ post.data.description }}</p>
         <p class="post-read-more"><a href="{{ post.url }}"> Read More --></a></p>
-        {% set tagfound = false %}
-        {% for tag in post.data.tags %}
-            {% if tag === 'posts' %}
-                {# do nothing #}
-            {% else %}
-                {% set tagfound = true %}
-            {% endif %}
-        {% endfor %}
-        {% if tagfound === true %} 
-        <section class="post-summary-tags">
-            <ul>
-                {% for tag in post.data.tags %}
-                    {% if tag != "posts" %}
-                        <li>{{ tag }}</li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </section>
-        {% endif %}
     </section>
     {% endfor %}
 </section>

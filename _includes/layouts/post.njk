@@ -5,7 +5,27 @@ layout: layouts/base.njk
     <h1 class="post-title">{{ title }}</h1>
     <div class="post-date">Published {{ date.toDateString() }}</div>
     <img class="post-header-image" src="{{ postHeaderImageUrl }}" alt="Header image">
+    <section class="post-tag">
+        {% for tag in tags %}
+            {% if tag != "posts" %}
+            {% set tagUrl %}/thoughts/{{ tag }}/{% endset %}
+                <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+            {% endif %}
+        {% endfor %}
+    </section>
     <section class="post-content">
     {{ content | safe }}
+    </section>
+    <section class="post-footer">
+        <section class="post-navigation">
+            <section class="post-pagination-older">
+                {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+                {%- if nextPost %}<a href="{{ nextPost.url | url }}">Previous</a>{% endif %}
+            </section>
+            <section class="post-pagination-newer">
+                {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                {%- if previousPost %}<a href="{{ previousPost.url | url }}">Next</a>{% endif %}
+            </section>
+        </section>
     </section>
 </article>
