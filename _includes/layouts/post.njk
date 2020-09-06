@@ -17,15 +17,31 @@ layout: layouts/base.njk
     {{ content | safe }}
     </section>
     <section class="post-footer">
-        <section class="post-navigation">
-            <section class="post-pagination-older">
-                {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-                {%- if nextPost %}<a href="{{ nextPost.url | url }}">Previous</a>{% endif %}
-            </section>
-            <section class="post-pagination-newer">
-                {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-                {%- if previousPost %}<a href="{{ previousPost.url | url }}">Next</a>{% endif %}
-            </section>
-        </section>
+        <nav class="posts-bottom-nav">
+            {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+            {%- if previousPost %}
+            <a href="{{ previousPost.url}} " class="posts-previous-post">
+                <div class="posts-previous-post-img">
+                    <img src="/media/iconfinder_nav-arrow-left_383101.svg" alt="">
+                </div>
+                <div class="posts-previous-post-text">
+                    <p class="posts-previous-post-heading">Previous post</p>
+                    <p class="posts-previous-post-title">{{ previousPost.data.title }}</p>
+                </div>
+            </a>
+            {% endif %}
+            {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+            {%- if nextPost %}
+            <a href="{{ nextPost.url }}" class="posts-next-post">
+                <div class="posts-next-post-text">
+                    <p class="posts-next-post-heading">Next post</p>
+                    <p class="posts-next-post-title">{{ nextPost.data.title }}</p>
+                </div>
+                <div class="posts-next-post-img">
+                    <img src="/media/iconfinder_nav-arrow-right_383100.svg" alt="">
+                </div>
+            </a>
+            {% endif %}
+        </nav>
     </section>
 </article>
