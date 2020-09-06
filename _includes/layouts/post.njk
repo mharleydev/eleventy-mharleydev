@@ -30,6 +30,7 @@ layout: layouts/base.njk
                 </div>
             </a>
             {% endif %}
+            <div class="space-holder"></div>
             {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
             {%- if nextPost %}
             <a href="{{ nextPost.url }}" class="posts-next-post">
