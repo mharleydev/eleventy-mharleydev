@@ -8,16 +8,18 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
-layout: layouts/base.njk
+layout: layouts/standard-page.njk
 eleventyComputed:
-  title: Tagged “{{ tag }}”
+  title: "#{{ tag }}"
 permalink: /thoughts/{{ tag }}/
 ---
-<h1>#{{ tag }}</h1>
-
-<ol>
-{% set taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-{% endfor %}
-</ol>
+<section class="post-info">
+  {% set taglist = collections[ tag ] %}
+  {% for post in taglist | reverse %}
+    <a href="{{ post.url }}" class="post-summary">
+      <div class="post-index-date">Published {{ post.data.date.toDateString() }}</div>
+      <h2 class="post-info-heading">{{ post.data.title }}</h2>
+      <p class="post-description">{{ post.data.description }}</p></p>
+    </a>
+  {% endfor %}
+</section
