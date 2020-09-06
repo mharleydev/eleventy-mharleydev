@@ -7,12 +7,10 @@ postHeaderImageUrl: /images/Michael-Harley-Avatar.jpeg
 ---
 <section class="post-info">
     {% for post in collections.posts | reverse %}
-    <a href="{{ post.url }}">
-        <section class="post-summary">
+    <a href="{{ post.url }}" class="post-summary">
             <div class="post-index-date">Published {{ post.data.date.toDateString() }}</div>
             <h2 class="post-info-heading">{{ post.data.title }}</h2>
             <p class="post-description">{{ post.data.description }}</p></p>
-        </section>
     </a>
     {% endfor %}
 </section>
