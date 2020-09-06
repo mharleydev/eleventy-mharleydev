@@ -17,6 +17,9 @@ layout: layouts/base.njk
     {{ content | safe }}
     </section>
     <section class="post-footer">
+        <section class="post-discussion-links">
+        <a href="http://mobile.twitter.com/search?q={{ metadata.url}}{{ page.url }}">Discuss on Twitter</a>
+        </section>
         <nav class="posts-bottom-nav">
             {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
             {%- if previousPost %}
