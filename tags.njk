@@ -12,6 +12,7 @@ layout: layouts/standard-page.njk
 eleventyComputed:
   title: "#{{ tag }}"
 permalink: /thoughts/{{ tag }}/
+changeFreq: weekly
 ---
 <section class="post-info">
   {% set taglist = collections[ tag ] %}
