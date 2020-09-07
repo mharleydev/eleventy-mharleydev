@@ -4,7 +4,12 @@ layout: layouts/base.njk
 <article class="post">
     <h1 class="post-title">{{ title }}</h1>
     <div class="post-date">Published {{ date.toDateString() }}</div>
-    <img class="post-header-image" src="{{ postHeaderImageUrl }}" alt="Header image">
+    <p>
+        <img class="post-header-image" src="{{ postHeaderImageUrl }}" alt="Header image">
+        <i class="post-header-image-credit" >
+            {{ postHeaderImageCredit | safe }}
+        </i>
+    </p>
     <section class="post-tag">
         {% for tag in tags %}
             {% if tag != "posts" %}
