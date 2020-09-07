@@ -20,6 +20,7 @@ layout: layouts/base.njk
         <section class="post-discussion-links">
         <a href="http://mobile.twitter.com/search?q={{ metadata.url}}{{ page.url }}">Discuss on Twitter</a>
         </section>
+        <p>←<a href="/thoughts/"> Return to post index</a></p>
         <nav class="posts-bottom-nav">
             {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
             {%- if previousPost %}
